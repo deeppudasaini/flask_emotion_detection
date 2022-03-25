@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href=""
+      integrity="sha512-uxeJKeur4Xsr2G34/0G7zjr2jNkx9ICMzn2eueNYgrofsWiWAC4Tqdq3pHbn1lfaWYQafovMfLTfZAsZq3i/WQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Emotion Detection</title>
+    <style>
+      body {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3ccircle r='50.263716793652094' cx='544.71' cy='497.89' fill='%23d3b714'%3e%3c/circle%3e%3cpath d='M1280.18 541.72L1267.38 541.4 1264.89 528.84 1252.08 528.52 1249.59 515.96 1236.79 515.63 1234.29 503.07M1285.34 535.6L1272.54 535.28 1270.04 522.72 1257.24 522.4 1254.74 509.84 1241.94 509.52 1239.44 496.95M1290.49 529.48L1277.69 529.16 1275.19 516.6 1262.39 516.28 1259.89 503.72 1247.09 503.4 1244.6 490.84' stroke='%23e73635' stroke-width='1' stroke-dasharray='2%2c 2'%3e%3c/path%3e%3crect width='264' height='264' clip-path='url(%26quot%3b%23SvgjsClipPath1001%26quot%3b)' x='395.78' y='-16.38' fill='url(%23SvgjsPattern1002)' transform='rotate(269.48%2c 527.78%2c 115.62)'%3e%3c/rect%3e%3cpath d='M1129.71 461.65999999999997 L1085.69 414.52L1139.8375862894081 405.952413710592z' fill='%23e73635'%3e%3c/path%3e%3crect width='156' height='156' clip-path='url(%26quot%3b%23SvgjsClipPath1003%26quot%3b)' x='155.09' y='103.34' fill='url(%23SvgjsPattern1004)' transform='rotate(183.82%2c 233.09%2c 181.34)'%3e%3c/rect%3e%3crect width='132' height='132' clip-path='url(%26quot%3b%23SvgjsClipPath1005%26quot%3b)' x='446.54' y='39.02' fill='url(%23SvgjsPattern1006)' transform='rotate(132.52%2c 512.54%2c 105.02)'%3e%3c/rect%3e%3cpath d='M482.26 39.37L491.35 48.39 484.55 59.24 493.64 68.26 486.84 79.11 495.93 88.13 489.13 98.98M474.31 40.29L483.41 49.31 476.6 60.16 485.69 69.17 478.89 80.02 487.98 89.04 481.18 99.89M466.37 41.2L475.46 50.22 468.65 61.07 477.75 70.09 470.94 80.94 480.03 89.96 473.23 100.81' stroke='%23037b0b' stroke-width='1' stroke-dasharray='4%2c 4'%3e%3c/path%3e%3ccircle r='76.44320140961483' cx='995.51' cy='76.26' fill='%23037b0b'%3e%3c/circle%3e%3cpath d='M600.21 147.73L604.59 135.7 617.29 137.33 621.67 125.29 634.37 126.93 638.75 114.89 651.45 116.52M604.37 154.56L608.75 142.53 621.45 144.16 625.83 132.13 638.53 133.76 642.91 121.72 655.61 123.36' stroke='%23037b0b' stroke-width='1.2' stroke-dasharray='4%2c 4'%3e%3c/path%3e%3cpath d='M1339.8200000000002 347.34 L1372.3400000000001 415.24L1329.2731880905108 408.0968119094894z' stroke='%23037b0b' stroke-width='2.42' stroke-dasharray='2%2c 2'%3e%3c/path%3e%3ccircle r='80.95956746420865' cx='1356.24' cy='105.78' fill='%23d3b714'%3e%3c/circle%3e%3cpath d='M723.36 246.13 L786.94 162.9L687.6156901909848 136.98069019098463z' fill='%23e73635'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cpattern x='0' y='0' width='264' height='6' patternUnits='userSpaceOnUse' id='SvgjsPattern1002'%3e%3crect width='264' height='3' x='0' y='0' fill='%23e73635'%3e%3c/rect%3e%3crect width='264' height='3' x='0' y='3' fill='rgba(0%2c 0%2c 0%2c 0)'%3e%3c/rect%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1001'%3e%3ccircle r='66' cx='527.78' cy='115.62'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='6' height='6' patternUnits='userSpaceOnUse' id='SvgjsPattern1004'%3e%3cpath d='M0 6L3 0L6 6' stroke='%23037b0b' fill='none'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1003'%3e%3ccircle r='39' cx='233.09' cy='181.34'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='6' height='6' patternUnits='userSpaceOnUse' id='SvgjsPattern1006'%3e%3cpath d='M3 1L3 5M1 3L5 3' stroke='%23d3b714' fill='none' stroke-width='1'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath1005'%3e%3ccircle r='33' cx='512.54' cy='105.02'%3e%3c/circle%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+      }
+      h1 {
+        color: white;
+      }
+      h5 {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Emotion Prediction</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/visualization">Plots</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block content %}{% endblock content %}
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

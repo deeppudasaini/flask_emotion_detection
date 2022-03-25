@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Emotion Prediction</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form method="POST" enctype="multipart/form-data" action="/detect">
+        <input
+          type="hidden"
+          name="csrfmiddlewaretoken"
+          value="{{ csrf_token }}"
+        />
+
+        <input class="form-control" type="file" id="file" name="file" />
+        <div class="d-grid gap-2">
+          <button
+            type="submit"
+            class="btn btn-lg btn-primary"
+            type="button"
+            name="submit"
+          >
+            Predict
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
