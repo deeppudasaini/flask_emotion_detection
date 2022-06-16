@@ -14,13 +14,36 @@
           value="{{ csrf_token }}"
         />
 
-        <input class="form-control" type="file" id="file" name="file" />
+        <input
+          class="form-control"
+          type="file"
+          id="file"
+          name="file"
+          style="
+            width: 100%;
+            height: auto;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+          "
+        />
         <div class="d-grid gap-2">
           <button
             type="submit"
             class="btn btn-lg btn-primary"
             type="button"
             name="submit"
+            style="
+              width: 100%;
+              height: auto;
+              border: none;
+              border-radius: 0;
+              border-bottom: 1px solid #ccc;
+              padding: 10px;
+              margin-bottom: 10px;
+            "
           >
             Predict
           </button>
